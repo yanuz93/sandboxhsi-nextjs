@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Learn NextJS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+    .body {
+      margin-top: 33px;
+      margin-left: 137px;
+      margin-right: 140px;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      margin-bottom: 36px;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      padding: 0px;
+      gap: 36px;
+
+      width: 381px;
+      height: 25px;
+    }
+
+    .header-text {
+      font-family: 'Poppins', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height */
+
+      text-transform: uppercase;
+    }
+
+    .vertical-container {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 2em;
+    }
+
+    .horizontal-container {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 2em;
+    }
+
+    .left-body {
+      align-items: flex-start;
+      margin-left: 0em;
+      width: 494px;
+      height: 531px;
+    }
+
+    .right-body {
+      align-items: stretch;
+      height: 531px;
+    }
+
+    .body-title-text {
+      font-family: Playfair Display;
+      font-size: 52px;
+      font-weight: 400;
+      line-height: 69px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .body-content-text {
+      font-family: Poppins;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 28px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 14px 25px;
+      margin-left: 0px;
+      gap: 10px;
+
+      width: 248px;
+      height: 56px;
+
+      background: #F2F0DF;
+      border-radius: 19px;
+    }
+
+    .button .text {
+      width: 198px;
+      height: 28px;
+
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 158%;
+    }
+
+    .underlined-text {
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .big-card {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: end;
+      align-content: center;
+      height: 531px;
+      width: 254px;
+      border-radius: 19px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .small-card {
+      display: flex;
+      align-items: end;
+      flex-direction: row-reverse;
+      height: 251px;
+      width: 254px;
+      border-radius: 19px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .big-box {
+      display: flex;
+      justify-content: left;
+      padding: 2em;
+      height: 155px;
+      background: #FFFFFF;
+      border: 1px solid #000000;
+      box-shadow: 15px 9px 30px rgba(160, 160, 160, 0.25);
+      border-radius: 19px;
+    }
+
+    .big-box .big-text {
+      font-family: Poppins;
+      font-size: 33px;
+      font-weight: 275;
+      line-height: 52px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .big-box .normal-text {
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .big-box .normal-text bold {
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .small-box {
+      height: 61px;
+      width: 227px;
+      border-radius: 10px;
+      padding: 7px 17px 7px 17px;
+      margin: 10px;
+      background: #FFFFFF;
+    }
+
+    .small-box .bold-text {
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 25px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .small-box .normal-text {
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .small-box .price-tag {
+      font-family: Poppins;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="body">
+    <div class="header-container">
+      <div>
+        <img src="logo.svg" alt="logo" />
+      </div>
+      <div class="header">
+        <div class="header-text">
+          home
+        </div>
+        <div class="header-text">
+          products
+        </div>
+        <div class="header-text">
+          gallery
+        </div>
+        <div class="header-text">
+          contact
+        </div>
+      </div>
+    </div>
+    <div class="header-container">
+      <div class="vertical-container left-body">
+        <div class="body-title-text">
+          Quality apparel without the price tag
+        </div>
+        <div class="body-content-text">
+          No need to spend $xxx on apparel just for the name’s sake. Our premium apparel is made from the same stuff.
+        </div>
+        <div class="horizontal-container">
+          <div class="button">
+            <div class="text">
+              Browse our collection
+            </div>
+          </div>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <div class="underlined-text">
+              <u>Spring ‘23 Collection</u> &#8594;
+            </div>
+          </div>
+        </div>
+        <div class="big-box horizontal-container">
+          <div class="big-text">
+            50k
+          </div>
+          <div class="normal-text">
+            We’re proud to announce that we now employ a workforce of over <bold>50,000</bold>. It’s all possible
+            because of you.
+          </div>
+        </div>
+      </div>
+      <div class="horizontal-container right-body">
+        <div class="horizontal-container">
+          <div class="big-card" style="background-image: url(clothing3.jpg);">
+            <div class="small-box horizontal-container">
+              <div>
+                <div class="bold-text">
+                  Fauxica Sport
+                </div>
+                <div class="normal-text">
+                  Running shoe
+                </div>
+              </div>
+              <div class="price-tag">
+                $59
+              </div>
+            </div>
+          </div>
+          <div class="vertical-container">
+            <div class="small-card" style="background-image: url(clothing1.jpg);">
+              <div class="small-box horizontal-container">
+                <div>
+                  <div class="bold-text">
+                    Fauxica Sport
+                  </div>
+                  <div class="normal-text">
+                    Running shoe
+                  </div>
+                </div>
+                <div class="price-tag">
+                  $59
+                </div>
+              </div>
+            </div>
+            <div class="small-card" style="background-image: url(clothing2.jpg);">
+              <div class="small-box horizontal-container">
+                <div>
+                  <div class="bold-text">
+                    Fauxica Sport
+                  </div>
+                  <div class="normal-text">
+                    Running shoe
+                  </div>
+                </div>
+                <div class="price-tag">
+                  $59
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
